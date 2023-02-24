@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    .half{
+      margin-top: -4px;
+    }
+    .button{
+      background: #ffc43a;
+      width: 185px;
+      height: 50px;
+      position: absolute;
+      top: 170px;
+      left: 1100px;
+      border: none;
+      border-radius: 20px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .button2{
+      background: #ffc43a;
+      width: 185px;
+      height: 50px;
+      position: absolute;
+      top: 170px;
+      left: 1300px;
+      border: none;
+      border-radius: 20px;
+      font-size: 20px;
+      cursor: pointer;
+
+
+    }
+  </style>
+  <img class="tavi" src="tavi.png" alt="">
+  <img class="half" src="first-half.png" alt="">
+  <button class="button" onclick="fafo()" >Send</button>
+  <button class="button2">Request</button>
+  <img src="bolo.png" alt="">
+  <script>
+    function fafo(){
+      window.location = "/pp/transfer.html"
+    }
+  </script>
+</body>
+</html>

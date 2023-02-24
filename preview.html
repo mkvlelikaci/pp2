@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//db.onlinewebfonts.com/c/44994582bcefd02119158ff8b0d16b75?family=PayPal+Sans+Big" rel="stylesheet" type="text/css"/>
+
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .main{
+            width: 600px;
+            height: 450px;
+            border: 1px solid;
+            position: absolute;
+            left: 630px;
+            top: 150px;
+            border-radius: 20px;
+            border-color: #33333373;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .sqrini{
+            position: absolute;
+            top: 60px;
+            left: 80px;
+        }
+        .emaili{
+            position: absolute;
+            top: 90px;
+            left: 230px;
+            font-size: 28px;
+            font-family: PayPal Sans Big;
+        }
+        .ppaf-input{
+            border: none;
+            position: absolute;
+            top: 180px;
+            left: 290px;
+            font-family: PayPal Sans Big;
+            color: #2c2e2fe1;
+        }
+        .ppaf-input:focus{
+            outline: none;
+
+        }
+        .zauri{
+            position: absolute;
+            width: 30px;
+            top: 180px;
+            left: 260px;
+        }
+        .muchu{
+            position: absolute;
+            top: 230px;
+            left: 300px;
+        }
+        .foor{
+            position: absolute;
+            top: 280px;
+            left: 100px;
+
+        }
+        .prot{
+            position: absolute;
+            top: 640px;
+            left: 700px;
+        }
+        .button{
+            font-family: PayPal Sans Big;
+            position: absolute;
+            top: 760px;
+            left: 870px;
+            background-color: #142c8e;
+            color: white;
+            width: 120px;
+            height: 45px;
+            border: none;
+            font-size: 20px;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+        .cancel{
+            position: absolute;
+            top: 830px;
+            left: 885px;
+        }
+        #emaili{
+            position: absolute;
+            top: 90px;
+            left: 210px;
+            font-size: 28px;
+            font-family: PayPal Sans Big;
+      
+        }
+        .sendButton{
+            font-family: PayPal Sans Big;
+            position: absolute;
+            top: 1010px;
+            left: 870px;
+            background-color: #142c8e;
+            color: white;
+            width: 120px;
+            height: 45px;
+            border: none;
+            font-size: 20px;
+            display: none;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+
+
+    </style>
+    <img src="./tavikaci.png" alt="">
+    <div class="main">
+        <img class="sqrini" src="Screenshot_5.png" alt="">
+        <p id="emaili"></p>
+        <img class="zauri" src="./Screenshot_1.png" alt="">
+        <input aria-label="enter amount field" data-nemo="amount" dir="ltr" autocomplete="off" type="tel" name="amount" id="fn-amount" required="" class="ppaf-input" value="0,00" style="width: 87px; font-size: 40px; font-family: PayPalSansBig-Regular, &quot;Helvetica Neue&quot;, Arial, sans-serif;">
+        <img class="muchu" src="./usd.png" alt="">
+        <img class="foor" src="forr.png" alt="">
+        
+    </div>
+    <button onclick="navigateToSecondPage()" class="sendButton">send</button>
+    <img class="prot" src="prot.png" alt="">
+    <button onclick="shecvale()" class="button">Continue</button>
+    <img class="cancel" src="cancel.png" alt="">
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const myVariable = params.get('myVariable');
+        document.getElementById("emaili").textContent = myVariable;
+
+
+        function navigateToSecondPage() {
+        const myVariable3 = document.getElementById("emaili").innerHTML;
+
+
+          const myVariable2 = document.getElementById("fn-amount").value;
+          const url = `/pp/success.html?myVariable2=${encodeURIComponent(myVariable2)} to ${encodeURIComponent(myVariable3)}`;
+          window.location.href = url;
+        }
+        function shecvale(){
+            document.querySelector(".prot").src = "./finali2.png"
+            document.querySelector(".prot").style.left = "630px"
+            document.querySelector(".sendButton").style.display = "inline-block"
+            document.querySelector(".button").style.display = "none"
+            document.querySelector(".cancel").style.top = "1060px"
+        }
+    </script>
+  
+</body>
+</html>
